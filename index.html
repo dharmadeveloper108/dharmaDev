@@ -1,0 +1,67 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+
+  <title>Francesca Ida Rocci</title>
+  <meta name="description" content="dharmaDev Personal Website">
+
+  <link rel="stylesheet" href="css/styles.css">
+  <link href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css" rel="stylesheet">
+  <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet"> 
+  <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap" rel="stylesheet"> 
+</head>
+
+<body>
+  <div id="container">
+    <header class="mdc-top-app-bar">
+      <div class="mdc-top-app-bar__row">
+        <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start">
+          <!-- <button class="material-icons mdc-top-app-bar__navigation-icon mdc-icon-button" aria-label="Open navigation menu">menu</button> -->
+          <span class="mdc-top-app-bar__title">✨ dharmaDev ~ software developer</span>
+        </section>
+        <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-end" role="toolbar">
+          <button class="material-icons mdc-top-app-bar__action-item mdc-icon-button code" aria-label="Terminal"
+            id="code">code</button>
+          <button class="material-icons mdc-top-app-bar__action-item mdc-icon-button"
+            aria-label="Info">info</button>
+          <button class="material-icons mdc-top-app-bar__action-item mdc-icon-button"
+            aria-label="Options">more_vert</button>
+        </section>
+      </div>
+    </header>
+
+      <div id="terminal">
+        <div id="terminalheader">
+          <div id="controllers">
+            <div id="close"></div>
+            <div id="collapse"></div>
+            <div id="fullscreen"></div>
+          </div>
+          <div id="terminal-details">🏠 User - user@Guest </div>
+          <div id="window-size"></div>
+        </div>
+        <!-- <p class="greenText">अतिथिदेवो भव</p>  -->
+        <p class="greenText">Welcome to my website! ✌️
+          <br><br>Type in this command line to navigate :)
+          <br>-info to get a list of the available commands
+        </p>
+        <p><strong>user</strong><span class="greenText">@Guest</span> ~/websitenavigation</p>
+        <form>
+          <label for="fname"></label>
+          <input type="text" id="fname" name="fname" value="> $ ">
+        </form>
+      </div>
+
+  </div>
+  <footer class="footer">
+    <div class="wrapper">
+    </div>
+  </footer>
+  <script src="js/draggable-ui.js"></script>
+</body>
+</html>
