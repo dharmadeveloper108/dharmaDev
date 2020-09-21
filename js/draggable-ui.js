@@ -1,31 +1,14 @@
- 
-const draggableTerminal = document.getElementById('terminal');
+ const draggableTerminal = document.getElementById('terminal');
 
+ // listen to terminal resize and display size
+ const resizeObserver = new ResizeObserver(entries => {
+     let draggableTerminalWidth = draggableTerminal.offsetWidth;
+     let draggableTerminalHeight = draggableTerminal.offsetHeight;
+     document.getElementById('window-size').innerHTML = draggableTerminalWidth + "x" + draggableTerminalHeight;
+ });
+ resizeObserver.observe(draggableTerminal);
 
-function getTerminalSize() {
-
-    let draggableTerminalWidth = draggableTerminal.offsetWidth;
-    let draggableTerminalHeight = draggableTerminal.offsetHeight;
-    document.getElementById('window-size').innerHTML = draggableTerminalWidth + "x" + draggableTerminalHeight;
-}
-
-
-const resizeObserver = new ResizeObserver(entries => {
-    for (const entry of entries) {
-      if (entry.contentBoxSize) {
-        let draggableTerminalWidth = draggableTerminal.offsetWidth;
-    let draggableTerminalHeight = draggableTerminal.offsetHeight;
-    document.getElementById('window-size').innerHTML = draggableTerminalWidth + "x" + draggableTerminalHeight;
-      } else {
-        let draggableTerminalWidth = draggableTerminal.offsetWidth;
-    let draggableTerminalHeight = draggableTerminal.offsetHeight;
-    document.getElementById('window-size').innerHTML = draggableTerminalWidth + "x" + draggableTerminalHeight;
-      }
-    }
-});
-resizeObserver.observe(draggableTerminal);
-
- //Make the DIV element draggagle:
+ // make the terminal DIV draggable:
  dragElement(draggableTerminal);
 
  function dragElement(elmnt) {
@@ -34,10 +17,8 @@ resizeObserver.observe(draggableTerminal);
          pos3 = 0,
          pos4 = 0;
      if (document.getElementById(elmnt.id + "header")) {
-         /* if present, the header is where you move the DIV from:*/
          document.getElementById(elmnt.id + "header").onmousedown = dragMouseDown;
      } else {
-         /* otherwise, move the DIV from anywhere inside the DIV:*/
          elmnt.onmousedown = dragMouseDown;
      }
 
@@ -72,15 +53,30 @@ resizeObserver.observe(draggableTerminal);
      }
  }
 
+ // menu 'code' button to open terminal
  document.querySelector('.code').addEventListener('click', e => {
-    draggableTerminal.style.display = "block";
+     draggableTerminal.style.display = "block";
  });
 
+ // terminal 'close' red button
  document.getElementById('close').addEventListener('click', e => {
-    draggableTerminal.style.display = "none";
+     draggableTerminal.style.display = "none";
  })
 
+ // terminal 'fullscreen' green button
+ let isclicked = false;
  document.getElementById('fullscreen').addEventListener('click', e => {
-    draggableTerminal.style.width = "100%";
-    draggableTerminal.style.height = "100%";
-})
+     if (isclicked) {
+         draggableTerminal.style.width = "calc(40vw)";
+         draggableTerminal.style.height = "320px";
+         draggableTerminal.style.top = "calc(30vh)";
+         draggableTerminal.style.left = "calc(20vw)";
+         isclicked = false;
+         return;
+     }
+     draggableTerminal.style.width = "100%";
+     draggableTerminal.style.height = "100%";
+     draggableTerminal.style.top = "0";
+     draggableTerminal.style.left = "0";
+     isclicked = true;
+ })

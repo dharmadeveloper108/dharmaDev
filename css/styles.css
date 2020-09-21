@@ -46,7 +46,7 @@ body {
     left: calc(20vw);
     top: calc(30vh);
     width: calc(40vw);
-    min-width: 200px;
+    min-width: 320px;
     z-index: 9;
     background-color: #1d1d1d;
     border: 1px solid grey;
@@ -112,15 +112,23 @@ body {
     margin-left: 20px;
     padding-bottom: 20px;
     font-weight: 200;
+    color: #b3b3b2;
 }
 
 .greenText, #terminal>p.greenText {
     color: greenyellow;
 }
 
+.terminalLabel {
+    position: relative;
+    float: left;
+    padding-left: 10px;
+    margin-bottom: 0px;
+}
+
 input[type=text] {
-    width: 100%;
-    padding: 12px 20px;
+    width: 70%;
+    padding-left: 10px;
     margin: 8px 0;
     box-sizing: border-box;
     border: none;
@@ -129,9 +137,12 @@ input[type=text] {
     color: greenyellow;
     caret-color: greenyellow;
     padding-left: 10px;
-    font-family: monospace;
+    font-family: 'Source Code Pro', monospace;
     line-height: 1.5em;
     font-size: large;
+    position: relative;
+    float: left;
+    margin-top: 0px;
 }
 
 input:focus, textarea:focus, select:focus{
@@ -142,4 +153,5 @@ input:focus, textarea:focus, select:focus{
     position: relative;
     float: right;
     font-weight: 200;
+    color: #b3b3b2;
 }
