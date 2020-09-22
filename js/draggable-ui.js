@@ -54,29 +54,41 @@
  }
 
  // menu 'code' button to open terminal
- document.querySelector('.code').addEventListener('click', e => {
+ document.getElementById('menuAboutTerminal').addEventListener('click', e => {
      draggableTerminal.style.display = "block";
  });
 
- // terminal 'close' red button
- document.getElementById('close').addEventListener('click', e => {
-     draggableTerminal.style.display = "none";
- })
+ // close window
+ function closeWindow(btn, elem) {
+     btn.addEventListener('click', e => {
+         elem.style.display = "none";
+         document.getElementById('output').innerHTML = "";
+     });
+ }
 
- // terminal 'fullscreen' green button
+ closeWindow(document.getElementById('close'), draggableTerminal);
+ closeWindow(document.getElementById('close98'), windows98);
+
+ // 'fullscreen' mode
  let isclicked = false;
- document.getElementById('fullscreen').addEventListener('click', e => {
-     if (isclicked) {
-         draggableTerminal.style.width = "calc(40vw)";
-         draggableTerminal.style.height = "320px";
-         draggableTerminal.style.top = "calc(30vh)";
-         draggableTerminal.style.left = "calc(20vw)";
-         isclicked = false;
-         return;
-     }
-     draggableTerminal.style.width = "100%";
-     draggableTerminal.style.height = "100%";
-     draggableTerminal.style.top = "0";
-     draggableTerminal.style.left = "0";
-     isclicked = true;
- })
+
+ function setFullscreen(btn, elem) {
+     btn.addEventListener('click', e => {
+         if (isclicked) {
+             elem.style.width = "calc(40vw)";
+             elem.style.height = "320px";
+             elem.style.top = "calc(20vh)";
+             elem.style.left = "calc(15vw)";
+             isclicked = false;
+             return;
+         }
+         elem.style.width = "100%";
+         elem.style.height = "100%";
+         elem.style.top = "0";
+         elem.style.left = "0";
+         isclicked = true;
+     })
+ }
+
+ setFullscreen(document.getElementById('fullscreen'), draggableTerminal);
+ setFullscreen(document.getElementById('full98'), windows98);

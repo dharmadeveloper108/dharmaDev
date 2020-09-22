@@ -1,34 +1,42 @@
+@font-face {
+    font-family: 'JetbrainsMono';
+    src: url('../font/JetBrainsMono-Regular.woff2') format('woff2'),
+        url('../font/JetBrainsMono-Regular.woff') format('woff'),
+        url('../font/JetBrainsMono-Regular.ttf') format('truetype');
+}
+
 html,
 body {
     margin: 0px;
     padding: 0px;
     width: 100%;
     height: 100%;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Kumbh Sans', sans-serif;
 }
 
 body {
-    background-color:#e3eb00;
-    background: linear-gradient(45deg,#e3eb00 0%, #b1da48 100%);
+    background-color: #e3eb00;
+    background: linear-gradient(45deg, #e3eb00 0%, #b1da48 100%);
 }
 
 ::selection {
-    background: darkslategrey; 
+    background: darkslategrey;
     color: white;
-  }
-  ::-moz-selection {
-    background: darkslategrey; 
+}
+
+::-moz-selection {
+    background: darkslategrey;
     color: white;
-  }
+}
 
 #container {
     height: calc(100vh);
     background-image:
         linear-gradient(#a7d140 1px, transparent 1px),
-        linear-gradient(90deg,#a7d140 1px, transparent 1px);
-        /* linear-gradient(#a7d140 1px, transparent 1px),
+        linear-gradient(90deg, #a7d140 1px, transparent 1px);
+    /* linear-gradient(#a7d140 1px, transparent 1px),
         linear-gradient(90deg,#a7d140 1px, transparent 1px); */
-    background-size: 20px 20px;
+    background-size: 40px 40px;
     background-position: -2px -2px, -2px -2px, -1px -1px, -1px -1px;
     width: 100%;
     padding: 0px;
@@ -38,13 +46,30 @@ body {
     /* background-color: #2b2b2b!important; */
     /* background-color:blue !important; */
     /* background-color: darkslategrey !important; */
-    background-color: #535943!important;
+    /* background-color: #284561!important; */
+    background-color: #535943 !important;
+    font-family: 'Kumbh Sans', sans-serif !important;
+}
+
+.mdc-top-app-bar__title {
+    font-family: 'Kumbh Sans', sans-serif !important;
+}
+
+#menuAboutTerminal,
+#menuAbout {
+    cursor: pointer;
+}
+
+#menuAboutTerminal:hover,
+#menuAbout:hover {
+    text-decoration: underline;
 }
 
 #terminal {
     position: absolute;
-    left: calc(20vw);
-    top: calc(30vh);
+    left: calc(15vw);
+    top: calc(20vh);
+    min-height: calc(40vh);
     width: calc(40vw);
     min-width: 320px;
     z-index: 9;
@@ -53,12 +78,13 @@ body {
     border-radius: 5px;
     resize: both;
     overflow: auto;
+    font-weight: 200;
 }
 
 #terminal>p {
     color: white;
     padding-left: 10px;
-    font-family: 'Source Code Pro', monospace;
+    font-family: 'JetbrainsMono', monospace;
     line-height: 1.5em;
 }
 
@@ -72,6 +98,7 @@ body {
     border-top-right-radius: 5px;
     border-top-left-radius: 5px;
     color: white;
+    cursor: pointer;
 }
 
 #controllers {
@@ -115,7 +142,8 @@ body {
     color: #b3b3b2;
 }
 
-.greenText, #terminal>p.greenText {
+.greenText,
+#terminal>p.greenText {
     color: greenyellow;
 }
 
@@ -137,15 +165,17 @@ input[type=text] {
     color: greenyellow;
     caret-color: greenyellow;
     padding-left: 10px;
-    font-family: 'Source Code Pro', monospace;
+    font-family: 'JetbrainsMono', monospace;
     line-height: 1.5em;
-    font-size: large;
+    font-size: medium;
     position: relative;
     float: left;
-    margin-top: 0px;
+    margin-top: -5px;
 }
 
-input:focus, textarea:focus, select:focus{
+input:focus,
+textarea:focus,
+select:focus {
     outline: none;
 }
 
@@ -154,4 +184,120 @@ input:focus, textarea:focus, select:focus{
     float: right;
     font-weight: 200;
     color: #b3b3b2;
+}
+
+#windows98 {
+    position: absolute;
+    float: right;
+    right: 25%;
+    top: 25%;
+    width: calc(40vw);
+    height: calc(60vh);
+    background: white;
+    overflow-y: scroll;
+    box-sizing: border-box;
+    z-index: 10;
+    resize: both;
+    display: none;
+}
+
+#content98>p {
+    line-height: 1.5;
+    /* font-family: 'VT323', monospace;
+    font-size: x-large; */
+}
+
+#windows98header {
+    width: 100%;
+    height: 35px;
+    background-color: darkblue;
+    background: linear-gradient(90deg, darkblue 0%, blue 100%);
+    color: white;
+}
+
+#windows98header>h1 {
+    width: 20%;
+    position: absolute;
+    top: -20px;
+    left: 15px;
+    font-family: 'VT323', monospace;
+    font-weight: 100;
+}
+
+#minimize98,
+#full98,
+#close98 {
+    width: 22px;
+    height: 22px;
+    background: #ccc;
+    position: relative;
+    float: right;
+    margin-right: 10px;
+    margin-top: 5px;
+}
+
+.btns98 {
+    width: 18px;
+    height: auto;
+    margin-left: -8px;
+}
+
+.border {
+    border-top: 2px white solid;
+    border-left: 2px white solid;
+    border-right: 2px grey solid;
+    border-bottom: 2px grey solid;
+}
+
+.borderBig {
+    border-top: 4px #ccc solid;
+    border-left: 4px #ccc solid;
+    border-right: 4px #444 solid;
+    border-bottom: 4px #444 solid;
+}
+
+#content98>p {
+    padding: 20px;
+}
+
+.footer {
+    position: absolute;
+    float: right;
+    top: 90%;
+    right: 5%;
+    width: 90%;
+}
+
+#footerWrapper {
+    position: relative;
+    float: right;
+}
+
+#credits {
+    position: relative;
+    float: left;
+    margin-right: 20px;
+}
+
+#githubLogo,
+#linkedinLogo,
+#mailLogo {
+    position: relative;
+    float: left;
+    margin-top: -5px;
+    margin-right: 10px;
+    transition: .3s ease;
+}
+
+#githubLogo:hover,
+#linkedinLogo:hover,
+#mailLogo:hover {
+    opacity: .5;
+}
+
+#githubLogoImg,
+#linkedinLogoImg,
+#mailLogoImg {
+    width: 25px;
+    height: 25px;
 }
