@@ -147,6 +147,11 @@ body {
     color: greenyellow;
 }
 
+.bluText {
+    color: darkblue;
+    font-size: small;
+}
+
 .terminalLabel {
     position: relative;
     float: left;
@@ -203,6 +208,7 @@ select:focus {
 
 #content98>p {
     line-height: 1.5;
+    font-family: 'JetbrainsMono', monospace;
     /* font-family: 'VT323', monospace;
     font-size: x-large; */
 }
@@ -300,4 +306,9 @@ select:focus {
 #mailLogoImg {
     width: 25px;
     height: 25px;
+}
+
+.retrofont {
+    font-family: 'VT323', monospace;
+    font-size: 2em;
 }

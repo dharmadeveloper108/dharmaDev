@@ -30,10 +30,3 @@ windows98.addEventListener("click", e => {
 function bringToFront(element) {
         element.style.zIndex = "10";
 }
-
-function closeDiv(btn, element) {
-        btn.addEventListener('click', e => {
-                element.style.display = "none";
-
-        })
-}
