@@ -58,6 +58,13 @@
      draggableTerminal.style.display = "block";
  });
 
+// menu 'about' button to open about page
+  document.getElementById('menuAbout').addEventListener('click', e => {
+    windows98.style.display = "block";
+    setWindowsContent("About", about);
+});
+
+
  // close window
  function closeWindow(btn, elem) {
      btn.addEventListener('click', e => {

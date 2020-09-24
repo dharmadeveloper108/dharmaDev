@@ -69,7 +69,7 @@ body {
     position: absolute;
     left: calc(15vw);
     top: calc(20vh);
-    min-height: calc(40vh);
+    height: calc(60vh);
     width: calc(40vw);
     min-width: 320px;
     z-index: 9;
@@ -77,8 +77,10 @@ body {
     border: 1px solid grey;
     border-radius: 5px;
     resize: both;
-    overflow: auto;
+    overflow-y: scroll;
+    overflow-x: hidden;
     font-weight: 200;
+    box-sizing: border-box;
 }
 
 #terminal>p {
@@ -86,6 +88,8 @@ body {
     padding-left: 10px;
     font-family: 'JetbrainsMono', monospace;
     line-height: 1.5em;
+    width: 90%;
+    overflow: auto;
 }
 
 #terminalheader {
@@ -208,7 +212,7 @@ select:focus {
 
 #content98>p {
     line-height: 1.5;
-    font-family: 'JetbrainsMono', monospace;
+    /* font-family: 'JetbrainsMono', monospace; */
     /* font-family: 'VT323', monospace;
     font-size: x-large; */
 }
@@ -310,5 +314,8 @@ select:focus {
 
 .retrofont {
     font-family: 'VT323', monospace;
+}
+
+.big {
     font-size: 2em;
 }
