@@ -29,19 +29,10 @@
 
           <button class="material-icons mdc-top-app-bar__action-item mdc-icon-button" aria-label="Info" onclick="menuVisibility('menuAbout')">info</button>
           <a id="menuAbout" style=" display: none;">About</a>
+
+          <button class="material-icons mdc-top-app-bar__action-item mdc-icon-button" aria-label="Info" onclick="menuVisibility('menuResume')">description</button>
+          <a id="menuResume" style=" display: none;" onclick="window.open('CV-francescaidarocci.pdf')">Resume</a>
         </section>
-        <div class="mdc-menu mdc-menu-surface">
-          <ul class="mdc-list" role="menu" aria-hidden="true" aria-orientation="vertical" tabindex="-1">
-            <li class="mdc-list-item" role="menuitem">
-              <span class="mdc-list-item__ripple"></span>
-              <span class="mdc-list-item__text">A Menu Item</span>
-            </li>
-            <li class="mdc-list-item" role="menuitem">
-              <span class="mdc-list-item__ripple"></span>
-              <span class="mdc-list-item__text">Another Menu Item</span>
-            </li>
-          </ul>
-        </div>
       </div>
     </header>
 
@@ -60,7 +51,7 @@
         <br><br>Use this 'command line' to navigate the website :)
         <br>'--info' to get a list of the available commands
       </p>
-      <p id="sessionUser" style="color: white">user<span class="greenText">@Guest</span> ~/websitenavigation</p>
+      <p id="sessionUser" style="color: white">user<span class="greenText">@Guest</span> ~/websitenavigation<br></p>
       <p id="output" class="greenText"></p>
       <form type="post" name="terminalForm" id="terminalForm" autocomplete="off">
         <label for="terminalInput" class="greenText terminalLabel">> $ </label>
@@ -90,7 +81,7 @@
   
   <footer class="footer">
     <div id="footerWrapper">
-      <div id="credits">Find me here: </div>
+      <div id="credits">< /> Made with 🍦 vanilla JS • Find me here: </div>
       
       <!-- <div id="mailLogo">
         <button class="g-recaptcha" 

@@ -49,6 +49,9 @@ body {
     /* background-color: #284561!important; */
     background-color: #535943 !important;
     font-family: 'Kumbh Sans', sans-serif !important;
+    -webkit-mask-image: -webkit-gradient(linear, left top, left bottom,
+            from(#535943), to(rgba(0, 0, 0, 0)));
+    height: calc(20vh);
 }
 
 .mdc-top-app-bar__title {
@@ -56,12 +59,14 @@ body {
 }
 
 #menuAboutTerminal,
-#menuAbout {
+#menuAbout,
+#menuResume {
     cursor: pointer;
 }
 
 #menuAboutTerminal:hover,
-#menuAbout:hover {
+#menuAbout:hover,
+#menuResume:hover {
     text-decoration: underline;
 }
 
@@ -70,7 +75,7 @@ body {
     left: calc(15vw);
     top: calc(20vh);
     height: calc(60vh);
-    width: calc(40vw);
+    width: calc(45vw);
     min-width: 320px;
     z-index: 9;
     background-color: #1d1d1d;
@@ -249,7 +254,17 @@ select:focus {
 .btns98 {
     width: 18px;
     height: auto;
-    margin-left: -8px;
+    margin-left: -7px;
+}
+
+#cvButton {
+    background: #ccc;
+    padding: 20px;
+    font-family: 'VT323', monospace;
+    font-size: 1.5em;
+    position: relative;
+    float: right;
+    margin-bottom: 20px;
 }
 
 .border {
@@ -273,8 +288,8 @@ select:focus {
 .footer {
     position: absolute;
     float: right;
-    top: 90%;
-    right: 5%;
+    top: 95%;
+    right: 20px;
     width: 90%;
 }
 
@@ -318,4 +333,42 @@ select:focus {
 
 .big {
     font-size: 2em;
+}
+
+.projectBox {
+    background-color: #fff;
+    border: 1px solid #e1e4e8;
+    border-radius: 6px;
+    padding: 5px;
+}
+
+.blu {
+    color: blue;
+}
+
+.left {
+    position: relative;
+    float: left;
+}
+
+.iconPadding {
+    padding: 20px;
+    padding-bottom: 0px;
+}
+
+.repo-language-color {
+    position: relative;
+    top: 1px;
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+}
+
+.repo-language {
+    position: relative;
+    /* float: right; */
+    text-align: right;
+    color: grey; 
+    padding-left: 20px;
 }

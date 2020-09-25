@@ -64,7 +64,6 @@
     setWindowsContent("About", about);
 });
 
-
  // close window
  function closeWindow(btn, elem) {
      btn.addEventListener('click', e => {
@@ -79,13 +78,21 @@
  // 'fullscreen' mode
  let isclicked = false;
 
- function setFullscreen(btn, elem) {
+ function setFullscreen(btn, elem, elemName) {
      btn.addEventListener('click', e => {
+         if(isclicked && elemName == 'terminalWin'){
+            elem.style.width = "calc(45vw)";
+            elem.style.height = "calc(60vh)";
+            elem.style.top = "calc(20vh)";
+            elem.style.left = "calc(15vw)";
+            isclicked = false;
+            return;
+         }
          if (isclicked) {
              elem.style.width = "calc(40vw)";
-             elem.style.height = "320px";
-             elem.style.top = "calc(20vh)";
-             elem.style.left = "calc(15vw)";
+             elem.style.height = "calc(60vh)";
+             elem.style.top = "25%";
+             elem.style.left = "25%";
              isclicked = false;
              return;
          }
@@ -97,5 +104,5 @@
      })
  }
 
- setFullscreen(document.getElementById('fullscreen'), draggableTerminal);
- setFullscreen(document.getElementById('full98'), windows98);
+ setFullscreen(document.getElementById('fullscreen'), draggableTerminal, 'terminalWin');
+ setFullscreen(document.getElementById('full98'), windows98, 'winWin');
