@@ -53,7 +53,24 @@ virtually anyone. I enjoy working both in a team and solo<br><br>
 • I have a diverse job
 history, ranging from translator to graphic designer, from
 copywriter to control room operator, from event planner
-to personal assistant (just to name a few) </small><br><br>`;
+to personal assistant (just to name a few) </small><br><br>
+<img src="images/computer.gif" alt="dank gifs"> 
+<img src="images/dog10.gif" alt="dank gifs">
+<img src="images/files.gif" alt="dank gifs">
+<img src="images/ArquivodoWindows.gif" alt="dank gifs">
+<img src="images/Bgoku.gif" alt="dank gifs">
+<img src="images/computer_surfing_sm.gif" alt="dank gifs">
+<img src="images/lady.gif" alt="dank gifs">
+<img src="images/rotating_computer.gif" alt="dank gifs">
+<img src="images/rotstar2_e0.gif" alt="dank gifs">
+<img src="images/sonic_runnen.gif" alt="dank gifs">
+<img src="images/TypingComputer.gif" alt="dank gifs">
+<img src="images/Windows95.gif" alt="dank gifs">
+<img src="images/duck24.gif" alt="dank gifs">
+<img src="images/dove.gif" alt="dank gifs">
+<img src="images/bookani.gif" alt="dank gifs">
+<img src="images/firetext.gif" alt="dank gifs">
+`;
 
 const experience = `
 <small><strong>BV TECH</strong> // September 2019 - Present</small><br><br>
