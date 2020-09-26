@@ -51,7 +51,9 @@ body {
     font-family: 'Kumbh Sans', sans-serif !important;
     -webkit-mask-image: -webkit-gradient(linear, left top, left bottom,
             from(#535943), to(rgba(0, 0, 0, 0)));
-    height: calc(20vh);
+    mask-image: -webkit-gradient(linear, left top, left bottom,
+            from(#535943), to(rgba(0, 0, 0, 0)));
+    height: calc(25vh);
 }
 
 .mdc-top-app-bar__title {
@@ -259,9 +261,9 @@ select:focus {
 
 #cvButton {
     background: #ccc;
-    padding: 20px;
+    padding: 10px;
     font-family: 'VT323', monospace;
-    font-size: 1.5em;
+    font-size: 1.2em;
     position: relative;
     float: right;
     margin-bottom: 20px;
@@ -339,7 +341,9 @@ select:focus {
     background-color: #fff;
     border: 1px solid #e1e4e8;
     border-radius: 6px;
-    padding: 5px;
+    box-sizing: border-box;
+   contain: content;
+   margin-top: 20px;
 }
 
 .blu {
@@ -366,9 +370,26 @@ select:focus {
 }
 
 .repo-language {
-    position: relative;
-    /* float: right; */
-    text-align: right;
-    color: grey; 
+    font-size: 0.8em;
     padding-left: 20px;
+    font-style: oblique;
+    padding-bottom: 10px;
+}
+
+.collapsible {
+    padding: 20px;
+    padding-top: 0px;
+    font-size: 0.8em;
+    /* display: none; */
+}
+
+.projectButton {
+    background: #ccc;
+    padding: 10px;
+    font-family: 'VT323', monospace;
+    font-size: 1em;
+    position: relative;
+    float: right;
+    margin-bottom: 20px;
+    margin-right: 20px;
 }

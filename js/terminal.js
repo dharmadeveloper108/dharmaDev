@@ -41,7 +41,8 @@ function noenter() {
   return !(window.event && window.event.keyCode == 13);
 }
 
-const about = `<span class="retrofont big">Hi, I'm Kamala. </span>*:･ﾟ✧*:･ﾟ✧ <br><br>
+const about = `<span class="retrofont big">Hi, I'm Kamala. </span>*:･ﾟ✧*:･ﾟ✧ 
+<button id="cvButton" class="border" onclick="window.open('CV-francescaidarocci.pdf')" download>Download CV</button><br><br>
 I love making things with code.<br> I'm a perfectionist but I'm also very passionate about getting things done.
 Here are some fun facts about me: <br><br><small>
 • I have a Bachelor’s Degree in Sanskrit Language. That
@@ -52,8 +53,7 @@ virtually anyone. I enjoy working both in a team and solo<br><br>
 • I have a diverse job
 history, ranging from translator to graphic designer, from
 copywriter to control room operator, from event planner
-to personal assistant (just to name a few) </small><br><br>
-<button id="cvButton" class="border" onclick="window.open('CV-francescaidarocci.pdf')" download>Download CV</button>`;
+to personal assistant (just to name a few) </small><br><br>`;
 
 const experience = `
 <small><strong>BV TECH</strong> // September 2019 - Present</small><br><br>
@@ -68,26 +68,103 @@ maintenance for the Aeronautics project “SiLEF 2.0”;<br>
 <span class="bluText">Technologies: J2EE Web Applications (JSP/Servlet),
 Java 8, JavaScript, JQuery, GIT, Intellij IDEA.</span> `;
 
-const projects = `
-Here are some of my personal side projects: <br><br>
+const projectsObj = [
+  {
+    prTitle: 'MemoNagari Android App',
+    prTech: 'Android, Java8',
+    prDescr: `A memory cards game to challenge your knowledge of the Sanskrit (Devanagari) alphabet.`,
+    prBtnLink: 'Google Play link',
+    prBtnTxt: 'https://play.google.com/store/apps/details?id=it.hinduism.hindumemory',
+    prBtnLink1: '',
+    prBtnTxt1: '',
+  },
+  {
+    prTitle: 'Should I Wear Sunscreen?',
+    prTech: 'React JS, HTML/CSS',
+    prDescr: `A simple App to get the UV index level in your location and figure out if you need to wear sunscreen to go outside.`,
+    prBtnLink: 'Githu repo',
+    prBtnTxt: 'https://github.com/dharmadeveloper108/should-I-wear-sunscreen',
+    prBtnLink1: 'DEMO',
+    prBtnTxt1: 'https://uvindexapp.web.app/',
+  },
+  {
+    prTitle: 'Touch your Face => Post Tweet',
+    prTech: 'Node JS Rest API, Vanilla JavaScript, HTML/CSS',
+    prDescr: `A web App that uses the Tensorflow Bodypic library. Basically, if you touch your face a Twitter bot posts a random tweet from a selection of embarrassing posts.`,
+    prBtnLink: 'Back-end code',
+    prBtnTxt: 'https://github.com/dharmadeveloper108/cringe_tweet_bot',
+    prBtnLink1: 'Front-end code',
+    prBtnTxt1: 'https://github.com/dharmadeveloper108/touchFace_tweetCringe',
+  },
+  {
+    prTitle: 'KindlyShare',
+    prTech: 'Flutter, Dart',
+    prDescr: `#Hack20 Flutter Hackathon submission. A mobile app aimed at assisting local neighborhoods in times of crisis.`,
+    prBtnLink: 'Githu repo',
+    prBtnTxt: 'https://github.com/Storm-Slayers/kindlysharet',
+    prBtnLink1: '',
+    prBtnTxt1: '',
+  },
+  {
+    prTitle: 'QR Code Generator',
+    prTech: 'Spring Boot, Java11, Rest API',
+    prDescr: `A simple Spring Boot Rest API that generates a QR code from the body of the http POST request.`,
+    prBtnLink: 'Githu repo',
+    prBtnTxt: 'https://github.com/dharmadeveloper108/qr_code_generator_spring_boot',
+    prBtnLink1: '',
+    prBtnTxt1: '',
+  },
+  {
+    prTitle: 'Copy&Paste Joystick',
+    prTech: 'Arduino',
+    prDescr: `A firmware for Arduino Leonardo to use a Joystick as a Copy & Paste keyboard.`,
+    prBtnLink: 'Githu repo',
+    prBtnTxt: 'https://github.com/dharmadeveloper108/arduino_copy_paste_joystick',
+    prBtnLink1: 'Arduino Project Hub Article',
+    prBtnTxt1: 'https://create.arduino.cc/projecthub/dharmadeveloper108/arduino-leonardo-copy-paste-joystick-31f4bf?ref=user&ref_id=1616313&offset=0',
+  },
+  {
+    prTitle: 'Duplicated Tabs Destroyer',
+    prTech: 'Node JS Rest API, Vanilla JavaScript, HTML/CSS',
+    prDescr: `A Firefox extension to get rid of those pesky duplicated tabs cluttering your browser session.`,
+    prBtnLink: 'Githu repo',
+    prBtnTxt: 'https://github.com/dharmadeveloper108/browser-extensions/tree/master/firefox/duplicated-tabs-destroyer',
+    prBtnLink1: '',
+    prBtnTxt1: '',
+  },
+  {
+    prTitle: 'Eyes Saver',
+    prTech: 'Java11, Intellij IDEA',
+    prDescr: `Intellij IDEA extension to remind the user to take breaks from looking at the screen.`,
+    prBtnLink: 'Githu repo',
+    prBtnTxt: 'https://github.com/dharmadeveloper108/EyesSaver',
+    prBtnLink1: '',
+    prBtnTxt1: '',
+  },
+  {
+    prTitle: 'Random Quotes IOS App',
+    prTech: 'Swift, IOS',
+    prDescr: `A simple IOS App that makes GET requests to the Quotable API to retrieve and parse random quotes.`,
+    prBtnLink: 'Githu repo',
+    prBtnTxt: 'https://github.com/dharmadeveloper108/random-quotes-ios-app',
+    prBtnLink1: '',
+    prBtnTxt1: '',
+  }
+];
 
-<div class="projectBox">
-<svg class="left iconPadding" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M2 2.5A2.5 2.5 0 014.5 0h8.75a.75.75 0 01.75.75v12.5a.75.75 0 01-.75.75h-2.5a.75.75 0 110-1.5h1.75v-2h-8a1 1 0 00-.714 1.7.75.75 0 01-1.072 1.05A2.495 2.495 0 012 11.5v-9zm10.5-1V9h-8c-.356 0-.694.074-1 .208V2.5a1 1 0 011-1h8zM5 12.25v3.25a.25.25 0 00.4.2l1.45-1.087a.25.25 0 01.3 0L8.6 15.7a.25.25 0 00.4-.2v-3.25a.25.25 0 00-.25-.25h-3.5a.25.25 0 00-.25.25z">
-<path fill-rule="evenodd" d="M2 2.5A2.5 2.5 0 014.5 0h8.75a.75.75 0 01.75.75v12.5a.75.75 0 01-.75.75h-2.5a.75.75 0 110-1.5h1.75v-2h-8a1 1 0 00-.714 1.7.75.75 0 01-1.072 1.05A2.495 2.495 0 012 11.5v-9zm10.5-1V9h-8c-.356 0-.694.074-1 .208V2.5a1 1 0 011-1h8zM5 12.25v3.25a.25.25 0 00.4.2l1.45-1.087a.25.25 0 01.3 0L8.6 15.7a.25.25 0 00.4-.2v-3.25a.25.25 0 00-.25-.25h-3.5a.25.25 0 00-.25.25z"></path>
-</svg>
-<h3 class="blu left">Should I Wear Sunscreen? - React JS</h3>
-<div style="clear: both"></div>
-<span class="repo-language" style="margin-top: 0px ">
-<span class="repo-language-color" style="background-color: #f1e05a; margin-right: 10px"></span>
-JavaScript
-</span> 
+function iterateProjObjs(objs) {
 
-<p class="collapsible">
+  projectStr = '';
+  objs.forEach((obj, i) => {
+    projectStr += makeProjectsTabs(obj.prTitle, obj.prTech, obj.prDescr, 
+      obj.prBtnLink, obj.prBtnTxt, obj.prBtnLink1, obj.prBtnTxt1);
+});
 
-</p>
-</div>
+  return projectStr;
+}
 
-`;
+const projects = `Here are some of my personal side projects: <br><br>` +
+iterateProjObjs(projectsObj);
 
 function setWindowsContent(titleText, parText) {
   title.innerHTML = titleText;
@@ -104,4 +181,24 @@ function displayCommand(value) {
   tOutput.appendChild(userCln);
   tOutput.setAttribute('style', 'white-space: pre;');
   tInput.scrollIntoView();
+}
+
+function makeProjectsTabs(title, tech, descr, btnText, btnLink, btnDemoTxt, btnDemoLink) {
+  return `
+  <div class="projectBox">
+<svg class="left iconPadding" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M2 2.5A2.5 2.5 0 014.5 0h8.75a.75.75 0 01.75.75v12.5a.75.75 0 01-.75.75h-2.5a.75.75 0 110-1.5h1.75v-2h-8a1 1 0 00-.714 1.7.75.75 0 01-1.072 1.05A2.495 2.495 0 012 11.5v-9zm10.5-1V9h-8c-.356 0-.694.074-1 .208V2.5a1 1 0 011-1h8zM5 12.25v3.25a.25.25 0 00.4.2l1.45-1.087a.25.25 0 01.3 0L8.6 15.7a.25.25 0 00.4-.2v-3.25a.25.25 0 00-.25-.25h-3.5a.25.25 0 00-.25.25z">
+<path fill-rule="evenodd" d="M2 2.5A2.5 2.5 0 014.5 0h8.75a.75.75 0 01.75.75v12.5a.75.75 0 01-.75.75h-2.5a.75.75 0 110-1.5h1.75v-2h-8a1 1 0 00-.714 1.7.75.75 0 01-1.072 1.05A2.495 2.495 0 012 11.5v-9zm10.5-1V9h-8c-.356 0-.694.074-1 .208V2.5a1 1 0 011-1h8zM5 12.25v3.25a.25.25 0 00.4.2l1.45-1.087a.25.25 0 01.3 0L8.6 15.7a.25.25 0 00.4-.2v-3.25a.25.25 0 00-.25-.25h-3.5a.25.25 0 00-.25.25z"></path>
+</svg>
+<h4 class="blu left" style="margin-bottom: 5px;" >${title}</h4>
+<div style="clear: both"></div>
+<p class="repo-language" style="margin-top: 0px ">
+${tech}
+</p> 
+<p class="collapsible">
+${descr}
+</p>
+<button class="projectButton" onclick="window.location.href='${btnLink}'">${btnText}</button>
+${btnDemoTxt != '' ? `<button class="projectButton" onclick="window.location.href='${btnDemoLink}'">${btnDemoTxt}</button>` : `` }
+</div>
+  `;
 }
