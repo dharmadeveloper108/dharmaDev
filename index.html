@@ -23,15 +23,22 @@
           <span class="mdc-top-app-bar__title" style="font-size: 2em" title="Francesca Ida Rocci (Kamala) ~ software developer">✨ Kamala <em id="hidable">~ software developer</em></span>
         </section>
         <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-end" role="toolbar">
+          
+         
+            <button class="material-icons mdc-top-app-bar__action-item mdc-icon-button" aria-label="Info" onclick="menuVisibility('menuResume')">email</button>
+            <div class="tooltip">
+            <a id="menuResume" style=" display: none;" onclick="copyEmail()">Email</a>
+              <span class="tooltiptext" >Copy email to clipboard</span>
+            </div> 
+          
           <button class="material-icons mdc-top-app-bar__action-item mdc-icon-button code" aria-label="Terminal"
             id="code" onclick="menuVisibility('menuAboutTerminal')">code</button>
             <a id="menuAboutTerminal" style=" display: none;">Terminal</a>
 
           <button class="material-icons mdc-top-app-bar__action-item mdc-icon-button" aria-label="Info" onclick="menuVisibility('menuAbout')">info</button>
           <a id="menuAbout" style=" display: none;">About</a>
-
-          <button class="material-icons mdc-top-app-bar__action-item mdc-icon-button" aria-label="Info" onclick="menuVisibility('menuResume')">description</button>
-          <a id="menuResume" style=" display: none;" onclick="window.open('CV-francescaidarocci.pdf')">Resume</a>
+          
+          
         </section>
       </div>
     </header>

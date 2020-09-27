@@ -41,8 +41,12 @@ function noenter() {
   return !(window.event && window.event.keyCode == 13);
 }
 
-const about = `<span class="retrofont big">Hi, I'm Kamala. </span>*:･ﾟ✧*:･ﾟ✧ 
-<button id="cvButton" class="border" onclick="window.open('CV-francescaidarocci.pdf')" download>Download CV</button><br><br>
+const about = `<span class="retrofont big">Hi, I'm Kamala. </span>*:･ﾟ✧*:･ﾟ✧ *:･ﾟ
+<div class="tooltip">
+<button id="cvButton" class="border" onclick="copyEmail()">Email me</button>
+<span class="tooltiptext" >Copy email to clipboard</span>
+</div> 
+<br><br>
 I love making things with code.<br> I'm a perfectionist but I'm also very passionate about getting things done.
 Here are some fun facts about me: <br><br><small>
 • I have a Bachelor’s Degree in Sanskrit Language. That
