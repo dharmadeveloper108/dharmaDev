@@ -304,6 +304,7 @@ select:focus {
     position: relative;
     float: left;
     margin-right: 20px;
+    font-size: small;
 }
 
 #githubLogo,
@@ -392,4 +393,46 @@ select:focus {
     float: right;
     margin-bottom: 20px;
     margin-right: 20px;
+}
+
+@media (max-width: 1000px) {
+    #terminal {
+        position: absolute;
+        left: 10px;
+        top: calc(10vh);
+        height: calc(60vh);
+        width: calc(95vw);
+    }
+
+    .footer {
+        width: 100%;
+        right: 8px;
+    }
+
+   #hidable {
+       display: none;
+   }
+
+   #windows98 {
+    position: absolute;
+    float: right;
+    right: 5%;
+    top: 15%;
+    width: calc(80vw);
+    height: calc(60vh);
+    background: white;
+    overflow-y: scroll;
+    box-sizing: border-box;
+    z-index: 10;
+    resize: both;
+    display: none;
+}
+
+.iconPadding {
+    display: none;
+}
+
+.left {
+    padding-left: 20px;
+}
 }
