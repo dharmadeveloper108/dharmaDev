@@ -20,13 +20,13 @@ body {
 }
 
 ::selection {
-    background: darkslategrey;
-    color: white;
+    background: greenyellow;
+    color: darkslategray;
 }
 
 ::-moz-selection {
-    background: darkslategrey;
-    color: white;
+    background: greenyellow;
+    color: darkslategray;
 }
 
 #container {
@@ -267,7 +267,7 @@ select:focus {
     position: relative;
     float: right;
     cursor: pointer;
-    margin-left:100px;
+    margin-left:80px;
 }
 
 .border {
@@ -428,7 +428,7 @@ select:focus {
         position: absolute;
         left: 10px;
         top: calc(10vh);
-        height: calc(60vh);
+        height: calc(50vh);
         width: calc(95vw);
     }
 

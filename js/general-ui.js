@@ -7,12 +7,6 @@ function menuVisibility(elem) {
         node.style.display = display == "block" ? 'none' : "block"
 }
 
-// captcha
-//   <!-- <script src="https://www.google.com/recaptcha/api.js"></script> -->
-// function onSubmit(token) {
-//   document.getElementById("demo-form").submit();
-// }
-
 // make the windows98 DIV draggable:
 dragElement(windows98);
 
@@ -33,7 +27,6 @@ function bringToFront(element) {
 
 
 // copy email address
-
 function copyToClipboard(text) {
         var dummy = document.createElement("input");
         document.body.appendChild(dummy);
@@ -48,6 +41,6 @@ function copyEmail() {
         let emailFields = document.querySelectorAll('.tooltiptext');
 
         emailFields.forEach((email) => {
-                email.innerHTML = 'Copied!';
+                email.innerHTML = 'Email Copied!';
         });
 }
