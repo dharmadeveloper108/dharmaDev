@@ -239,8 +239,12 @@ ${tech}
 ${descr}
 </p>
 <p class="collapsible">${previewImg}</p>
-<button class="projectButton" onclick="window.location.href='${btnLink}'">${btnText}</button>
-${btnDemoTxt != '' ? `<button class="projectButton" onclick="window.location.href='${btnDemoLink}'">${btnDemoTxt}</button>` : `` }
+<button class="projectButton">
+<a style="text-decoration:none" href="${btnLink}">${btnText}</a>
+</button>
+${btnDemoTxt != '' ? `<button class="projectButton">
+<a style="text-decoration:none" href="${btnDemoLink}">${btnDemoTxt}</a>
+</button>` : `` }
 </div>
   `;
 }
