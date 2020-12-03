@@ -13,11 +13,11 @@ dragElement(windows98);
 // forefront window onclick 
 draggableTerminal.addEventListener("click", e => {
         bringToFront(draggableTerminal);
-        windows98.style.zIndex = "1";
+        windows98.style.zIndex = "5";
 });
 windows98.addEventListener("click", e => {
         bringToFront(windows98);
-        draggableTerminal.style.zIndex = "1";
+        draggableTerminal.style.zIndex = "5";
 });
 
 
