@@ -19,6 +19,10 @@ body {
     background: linear-gradient(45deg, #cde678 0%, #6ebbf1 100%);
 }
 
+.mdc-top-app-bar__title {
+    color: darkslategray;
+}
+
 ::selection {
     background: greenyellow;
     color: darkslategray;
