@@ -211,7 +211,7 @@ select:focus {
 #windows98 {
     position: absolute;
     float: right;
-    right: 25%;
+    right: 5%;
     top: 25%;
     width: calc(40vw);
     height: calc(60vh);
@@ -272,7 +272,7 @@ select:focus {
     font-size: 1.2em;
     position: relative;
     cursor: pointer;
-    margin-left:80px;
+    margin-left:15em;
 }
 
 .border {

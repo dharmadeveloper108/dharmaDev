@@ -43,13 +43,13 @@ function noenter() {
   return !(window.event && window.event.keyCode == 13);
 }
 
-const about = `<span class="retrofont big">Hi, I'm Kamala <small>(Francesca Ida Rocci)</small>. </span>*:･ﾟ✧*:･ﾟ✧ *:･ﾟ
-<div class="tooltip">
+const about = `<span class="retrofont big">Hi, I'm Kamala <small>(Francesca Ida Rocci)</small> </span><br><br>*:･ﾟ✧*:･ﾟ✧ *:･ﾟ
+<!--<div class="tooltip">
 <button id="cvButton" class="border" onclick="copyEmail()">Email me</button>
 <span class="tooltiptext" >Copy email to clipboard</span>
-</div> 
+</div> -->
 <br><br>
-I love making things with code.<br> I'm a perfectionist but I'm also very passionate about getting things done.
+I am a software developer who loves making things with code.<br> 
 Here are some fun facts about me: <br><br><small>
 • I have a Bachelor’s Degree in Sanskrit Language. That
 must be why I adapt well to working on legacy codebases:
@@ -248,3 +248,6 @@ ${btnDemoTxt != '' ? `<button class="projectButton">
 </div>
   `;
 }
+
+windows98.style.display = "block";
+setWindowsContent("About", about);
