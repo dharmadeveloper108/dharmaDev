@@ -44,22 +44,23 @@ function noenter() {
 }
 
 const about = `<span class="retrofont big">Hi, I'm Kamala <small>(Francesca Ida Rocci)</small> </span><br><br>*:･ﾟ✧*:･ﾟ✧ *:･ﾟ
-<!--<div class="tooltip">
+<br><br>
+<div class="tooltip">
 <button id="cvButton" class="border" onclick="copyEmail()">Email me</button>
 <span class="tooltiptext" >Copy email to clipboard</span>
-</div> -->
+</div>
 <br><br>
-I am a software developer who loves making things with code.<br> 
+I am a language-agnostic software developer who loves making things with code!
 Here are some fun facts about me: <br><br><small>
 • I have a Bachelor’s Degree in Sanskrit Language. That
 must be why I adapt well to working on legacy codebases:
-not that different from translating a Sanskrit text<br><br>
-• Even though I'm an introvert, I have a talent for befriending and getting along with 
-virtually anyone. I enjoy working both in a team and solo<br><br>
+not that different from translating a Sanskrit text :);<br>
+• Even though I'm an introvert, I like befriending and getting along with 
+virtually anyone. I enjoy working both in a team and solo;<br>
 • I have a diverse job
 history, ranging from translator to graphic designer, from
-copywriter to control room operator, from event planner
-to personal assistant (just to name a few) </small><br><br>
+copywriter to event organizer, from ghostwriter
+to personal assistant</small>.<br><br>
 <img src="images/computer.gif" alt="dank gifs"> 
 <img src="images/dog10.gif" alt="dank gifs">
 <img src="images/files.gif" alt="dank gifs">
@@ -80,9 +81,9 @@ to personal assistant (just to name a few) </small><br><br>
 
 const experience = `
 <small><strong>BV TECH</strong> // September 2019 - Present</small><br><br>
-<strong>Software Developer Consultant for LEONARDO</strong><br>
-• Feature development and bug fixing for the Arma dei Carabinieri Salary system web app.<br><br>
-<span class="bluText">Technologies: ASP.NET, C#, JQuery, HTML5, CSS3, Visual Studio.</span><br><br>
+<strong>Software Developer Consultant</strong><br>
+• Web app development, pair programming feature development and bug fixing.<br><br>
+<span class="bluText">Technologies: ASP.NET, C#, .NET Core 5.0, Blazor (Server Side), SQL, LINQ, HTML5, CSS3, JQuery, JavaScript, Visual Studio.</span><br><br>
 <strong>Software Developer Consultant for LEONARDO</strong><br>
 • Porting, stabilization activities, bug fixing and
 maintenance for the Aeronautics project “SiLEF 2.0”;<br>
@@ -93,12 +94,22 @@ Java 8, JavaScript, JQuery, GIT, Intellij IDEA.</span> `;
 
 const projectsObj = [
   {
-    prTitle: 'KindlyShare',
-    prTech: 'Flutter, Dart',
-    prDescr: `#Hack20 Flutter Hackathon submission. A mobile app aimed at assisting local neighborhoods in times of crisis.`,
+    prTitle: 'Chinchilla - Cross-platform mobile app',
+    prTech: 'Flutter, Dart, SQLite, AdMob',
+    prDescr: `Chinchilla care app to store journal entries and health data like weight, medications and vet appointments. With info about sounds, health facts, supplies etc.`,
+    prImg: '',
+    prBtnLink: 'Google Play link',
+    prBtnTxt: 'https://play.google.com/store/apps/details?id=com.dharmadeveloper.chinchilla_care',
+    prBtnLink1: '',
+    prBtnTxt1: '',
+  },
+  {
+    prTitle: 'Youtube Playlist to Excel API',
+    prTech: 'Java 11, Spring Boot, Youtube v3 API',
+    prDescr: `Rest API that accepts a playlist id as input and converts the playlist data into an Excel file.`,
     prImg: '',
     prBtnLink: 'Github repo',
-    prBtnTxt: 'https://github.com/Storm-Slayers/kindlyshare',
+    prBtnTxt: 'https://github.com/dharmadeveloper108/springBoot_youtubePlaylist_toExcel',
     prBtnLink1: '',
     prBtnTxt1: '',
   },
@@ -119,6 +130,16 @@ const projectsObj = [
     prImg: '',
     prBtnLink: 'Google Play link',
     prBtnTxt: 'https://play.google.com/store/apps/details?id=it.hinduism.hindumemory',
+    prBtnLink1: '',
+    prBtnTxt1: '',
+  },
+  {
+    prTitle: 'KindlyShare',
+    prTech: 'Flutter, Dart',
+    prDescr: `#Hack20 Flutter Hackathon submission. A mobile app aimed at assisting local neighborhoods in times of crisis.`,
+    prImg: '',
+    prBtnLink: 'Github repo',
+    prBtnTxt: 'https://github.com/Storm-Slayers/kindlyshare',
     prBtnLink1: '',
     prBtnTxt1: '',
   },
